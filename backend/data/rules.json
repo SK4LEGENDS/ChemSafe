@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "chemicals": ["bleach", "ammonia"],
+      "risk": "Dangerous",
+      "explanation": "Mixing bleach and ammonia produces toxic chloramine vapors.",
+      "precautions": [
+        "Do not mix under any circumstances.",
+        "Ensure high ventilation if used in the same area.",
+        "Use appropriate respiratory protection."
+      ]
+    },
+    {
+      "chemicals": ["acid", "base"],
+      "risk": "Caution",
+      "explanation": "Mixing acids and bases causes an exothermic neutralization reaction.",
+      "precautions": [
+        "Add acid to water, not water to acid.",
+        "Perform in a fume hood.",
+        "Wear heat-resistant gloves and goggles."
+      ]
+    },
+    {
+      "chemicals": ["ethanol", "strong acid"],
+      "risk": "Caution",
+      "explanation": "Strong acids can dehydrate ethanol, potentially causing boiling or splashing.",
+      "precautions": [
+        "Mix slowly while stirring.",
+        "Keep away from open flames.",
+        "Use secondary containment."
+      ]
+    },
+    {
+      "chemicals": ["hcl", "naoh"],
+      "risk": "Dangerous",
+      "explanation": "Highly exothermic neutralization producing salt and water. Can cause steam explosions if concentrated.",
+      "precautions": [
+        "Use dilute solutions if possible.",
+        "Perform on ice bath for large scales.",
+        "Full PPE required."
+      ]
+    }
+  ]
+}

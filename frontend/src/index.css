@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lab-text: #334155;
+  --lab-bg: #f8fafc;
+  --safe: #059669;
+  --safe-light: #ecfdf5;
+  --caution: #d97706;
+  --caution-light: #fffbeb;
+  --danger: #dc2626;
+  --danger-light: #fef2f2;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-700 font-sans antialiased text-sm overflow-hidden;
+    background-image: radial-gradient(circle at 1px 1px, rgba(99, 102, 241, 0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl font-bold transition-all shadow-md active:scale-95 disabled:opacity-50 text-xs;
+  }
+  
+  .glass-sidebar {
+    @apply bg-white/40 backdrop-blur-2xl border-none shadow-[10px_0_30px_-15px_rgba(0,0,0,0.02)];
+  }
+
+  .floating-pill {
+    @apply bg-white/90 backdrop-blur-xl border border-white/50 shadow-[0_15px_35px_-10px_rgba(0,0,0,0.08)];
+  }
+
+  .pastel-purple { @apply bg-[#f5f3ff] border-[#ede9fe] text-[#6d28d9]; }
+  .pastel-blue { @apply bg-[#f0f9ff] border-[#e0f2fe] text-[#0369a1]; }
+  .pastel-emerald { @apply bg-[#ecfdf5] border-[#d1fae5] text-[#047857]; }
+  .pastel-rose { @apply bg-[#fff1f2] border-[#ffe4e6] text-[#be123c]; }
+
+  .boundary-pulse {
+    @apply relative flex h-2 w-2;
+  }
+  .boundary-pulse::after {
+    content: '';
+    @apply absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-75;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full hover:bg-slate-400 transition-colors;
+}
+
+.chat-bubble-shadow {
+  box-shadow: 0 5px 15px -8px rgba(0,0,0,0.05);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-500;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-lg border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}

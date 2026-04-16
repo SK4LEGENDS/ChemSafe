@@ -1,0 +1,13 @@
+{
+  "name": "chemical-safety-checker",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && pip install -r backend/requirements.txt",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "uvicorn backend.main:app --reload --port 8000",
+    "start": "npx concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
